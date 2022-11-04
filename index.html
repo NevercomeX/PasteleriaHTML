@@ -37,10 +37,246 @@ El 4 de Noviembre se subirá el Form para que entreguen las prácticas. -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breaking Cakes</title>
     <link href="/dist/output.css" rel="stylesheet">
-    <title>Document</title>
 </head>
-    <body>
+<body>
+
+    <h1>Explicación de elementos compuestos LaunchX</h1>
+
+    <hr>
+    <!-- El cliente de la pastelería necesita ver los diferentes sabores de pasteles, así como los precios de cada uno. -->
+    <h2>Sabores del pastel</h2><br>
+    <input type="checkbox" id="topping1" name="topping1" value="Cebolla">
+    <label for="topping1">Vainilla</label><span> 25$</span><br>
+    <input type="checkbox" id="topping2" name="topping2" value="Cilantro">
+    <label for="topping2">Chocolate</label><span> 25$</span><br>
+    <input type="checkbox" id="topping3" name="topping3" value="Salsa">
+    <label for="topping3">Fresa</label><span> 25$</span><br>
+    <input type="checkbox" id="topping3" name="topping3" value="Salsa">
+    <label for="topping3">Limón</label><span> 25$</span>
+    <br><br>
+
+    <!-- El cliente de la pastelería necesita ver los diferentes adornos con los que se puede decorar el pastel y los precios de cada uno. -->
+
+        <h2>Adornos del pastel</h2><br>
+        <input type="checkbox" id="topping1" name="topping1" value="Cebolla">
+        <label for="topping1">Handmade Drawing Wedding Cake Topper</label><span> 25$</span><br>
+        <input type="checkbox" id="topping2" name="topping2" value="Cilantro">
+        <label for="topping2">Wedding Cake Topper Bobblehead</label><span> 25$</span><br>
+        <input type="checkbox" id="topping3" name="topping3" value="Salsa">
+        <label for="topping3">Personalized Car Cake Topper</label><span> 25$</span><br>
+        <input type="checkbox" id="topping3" name="topping3" value="Salsa">
+        <label for="topping3">Cowboy Cake Decorations</label><span> 25$</span><br>
+        <input type="checkbox" id="topping1" name="topping1" value="Cebolla">
+        <label for="topping1">Personalized custom pet dog wedding cake</label><span> 25$</span><br>
+        <input type="checkbox" id="topping2" name="topping2" value="Cilantro">
+        <label for="topping2">Sheep Cake Topper</label><span> 25$</span><br>
+        <input type="checkbox" id="topping3" name="topping3" value="Salsa">
+        <label for="topping3">Personalized Car Cake Topper</label><span> 25$</span><br>
+        <input type="checkbox" id="topping3" name="topping3" value="Salsa">
+        <label for="topping3">Dinosaur t-rex cake topper</label><span> 25$</span>
+
+        <!-- El cliente de la pastelería tendrá la posibilidad de combinar sabores dependiendo de sus preferencias. -->
     
-    </body>
+    <h2>Segundo Sabor</h2><br>
+    <input type="checkbox" id="topping1" name="topping1" value="Cebolla">
+    <label for="topping1">Vainilla</label><span> 25$</span><br>
+    <input type="checkbox" id="topping2" name="topping2" value="Cilantro">
+    <label for="topping2">Chocolate</label><span> 25$</span><br>
+    <input type="checkbox" id="topping3" name="topping3" value="Salsa">
+    <label for="topping3">Fresa</label><span> 25$</span><br>
+    <input type="checkbox" id="topping3" name="topping3" value="Salsa">
+    <label for="topping3">Limón</label><span> 25$</span>
+
+    <!-- El cliente de la pastelería tendrá la posibilidad de combinar adornos dependiendo de sus preferencias. -->
+
+    
+    <h2>Segundo Adorno para el pastel</h2><br>
+    <input type="checkbox" id="topping1" name="topping1" value="Cebolla">
+    <label for="topping1">Handmade Drawing Wedding Cake Topper</label><span> 25$</span><br>
+    <input type="checkbox" id="topping2" name="topping2" value="Cilantro">
+    <label for="topping2">Wedding Cake Topper Bobblehead</label><span> 25$</span><br>
+    <input type="checkbox" id="topping3" name="topping3" value="Salsa">
+    <label for="topping3">Personalized Car Cake Topper</label><span> 25$</span><br>
+    <input type="checkbox" id="topping3" name="topping3" value="Salsa">
+    <label for="topping3">Cowboy Cake Decorations</label><span> 25$</span><br>
+    <input type="checkbox" id="topping1" name="topping1" value="Cebolla">
+    <label for="topping1">Personalized custom pet dog wedding cake</label><span> 25$</span><br>
+    <input type="checkbox" id="topping2" name="topping2" value="Cilantro">
+    <label for="topping2">Sheep Cake Topper</label><span> 25$</span><br>
+    <input type="checkbox" id="topping3" name="topping3" value="Salsa">
+    <label for="topping3">Personalized Car Cake Topper</label><span> 25$</span><br>
+    <input type="checkbox" id="topping3" name="topping3" value="Salsa">
+    <label for="topping3">Dinosaur t-rex cake topper</label><span> 25$</span>
+
+    <!-- El cliente de la pastelería necesita poner en un formulario su pedido. -->
+    <!-- El formulario debe de contener los datos de contacto del cliente que son Nombre, Teléfono, Correo Electrónico, Descripción general del pastel y la selección de sabores y adornos. -->
+    <div class="row">
+        <div class="col-75">
+          <div class="container">
+            <form action="/action_page.php">
+              <div class="row">
+                <div class="col-50">
+                  <h3>Billing Address</h3>
+                  <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+                  <input type="text" id="fname" name="firstname" placeholder="John M. Doe">
+                  <label for="email"><i class="fa fa-envelope"></i> Email</label>
+                  <input type="text" id="email" name="email" placeholder="john@example.com">
+                  <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+                  <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
+                  <label for="city"><i class="fa fa-institution"></i> City</label>
+                  <input type="text" id="city" name="city" placeholder="New York">
+      
+                  <div class="row">
+                    <div class="col-50">
+                      <label for="state">State</label>
+                      <input type="text" id="state" name="state" placeholder="NY">
+                    </div>
+                    <div class="col-50">
+                      <label for="zip">Zip</label>
+                      <input type="text" id="zip" name="zip" placeholder="10001">
+                    </div>
+                  </div>
+                </div>
+      
+                <div class="col-50">
+                  <h3>Payment</h3>
+                  <label for="fname">Accepted Cards</label>
+                  <div class="icon-container">
+                    <i class="fa fa-cc-visa" style="color:navy;"></i>
+                    <i class="fa fa-cc-amex" style="color:blue;"></i>
+                    <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                    <i class="fa fa-cc-discover" style="color:orange;"></i>
+                  </div>
+                  <label for="cname">Name on Card</label>
+                  <input type="text" id="cname" name="cardname" placeholder="John More Doe">
+                  <label for="ccnum">Credit card number</label>
+                  <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+                  <label for="expmonth">Exp Month</label>
+                  <input type="text" id="expmonth" name="expmonth" placeholder="September">
+      
+                  <div class="row">
+                    <div class="col-50">
+                      <label for="expyear">Exp Year</label>
+                      <input type="text" id="expyear" name="expyear" placeholder="2018">
+                    </div>
+                    <div class="col-50">
+                      <label for="cvv">CVV</label>
+                      <input type="text" id="cvv" name="cvv" placeholder="352">
+                    </div>
+                  </div>
+                </div>
+      
+              </div>
+              <label>
+                <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
+              </label>
+              <input type="submit" value="Continue to checkout" class="btn">
+            </form>
+          </div>
+        </div>
+      
+        <div class="col-25">
+          <div class="container">
+            <h4>Cart
+              <span class="price" style="color:black">
+                <i class="fa fa-shopping-cart"></i>
+                <b>4</b>
+              </span>
+            </h4>
+            <p><a href="#">Product 1</a> <span class="price">$15</span></p>
+            <p><a href="#">Product 2</a> <span class="price">$5</span></p>
+            <p><a href="#">Product 3</a> <span class="price">$8</span></p>
+            <p><a href="#">Product 4</a> <span class="price">$2</span></p>
+            <hr>
+            <p>Total <span class="price" style="color:black"><b>$30</b></span></p>
+          </div>
+        </div>
+      </div>
+
+<!--  El pastelero necesita tener la información de la cantidad de sabores que le quedan para hacer los pasteles.
+      El pastelero necesita tener la información de la cantidad de adornos que le quedan para hacer los pasteles.
+      El pastelero necesita una tabla donde aparezcan los pedidos que se han realizado con los datos del formulario. -->
+
+
+    <h2>Select</h2>
+    <label for="tacos">De que la orden</label>
+    <select id="tacos" name="tacos">
+        <option value="suadero">Suadero</option>
+        <option value="pastor">Pastor</option>
+        <option value="campechanos">Campechanos</option>
+        <option value="tripa">Tripa</option>
+    </select>
+    
+    <h2>Select con Input</h2>
+    <label for="refresco">Elige tu refresco favorito</label><br>
+    <input list="refresco">
+    <datalist id="refresco">
+        <option value="Coca-Cola">
+        <option value="Manzana">
+        <option value="Naranja">
+        <option value="Mango">
+        <option value="Guayaba">
+    </datalist>
+    <br><br>
+
+    <hr>
+    
+    <h2>Input de Fecha</h2><br>
+    <input type="date" id="fecha1" name="fecha1"><br>
+    <input type="datetime-local" id="fecha2" name="fecha2"><br>
+    <input type="week" id="fecha3" name="fecha3"><br>
+    <input type="time" id="fecha4" name="fecha4"><br>
+    <input type="month" id="fecha5" name="fecha5"><br><br>
+    
+    <hr>
+
+    <h2>Input de Fecha</h2><br>
+    <input type="date" id="fecha1" name="fecha1"><br>
+    <input type="datetime-local" id="fecha2" name="fecha2"><br>
+    <input type="week" id="fecha3" name="fecha3"><br>
+    <input type="time" id="fecha4" name="fecha4"><br>
+    <input type="month" id="fecha5" name="fecha5"><br><br>
+    
+    <hr>
+    
+    <h2>Input de archivo</h2><br>
+    <input type="file" id="archivo1" name="archivo1" multiple><br><br>
+    
+    <h2>Input de Color</h2><br>
+    <input type="color" id="color1" name="color1"><br><br>
+    
+    <h2>Input de Rango</h2>
+    <label for="vol">Volumen (entre 0 y 50):</label><br>
+    <input type="range" id="vol" name="vol" min="0" max="50"><br>
+    
+    <hr>
+    
+    <h2>Input de botón</h2>
+    <input type="reset"><br>
+    <input type="submit"><br>
+    <input type="button" id="boton1" name="boton1" value="Botón 1" onclick="alert('Bienvenidos explorers');"><br><br>
+    
+    <hr>
+    <!-- Formularios -->
+    <h2>Ejemplo de Formulario</h2>
+    <form action="/accion.js" id="form1" method="post">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre"><br><br>
+        <input type="submit" value="Submit">
+        <input type="reset">
+    </form>
+    
+    <label for="apellido">Apellido:</label>
+    <input type="text" id="apellido" name="apellido" form="form1">
+    <!-- La página debe tener información de la pastelería que es Dirección, Teléfono y horarios de atención. -->
+    <footer class="py-12 grid grid-cols-1 md:grid-cols-12 bg-gradient-to-r from-blue-500 to-blue-500 ">
+        <div class="font-bold md:col-span-12 text-center text-gray-200  text-2xl ">
+          Copyright &copy; <a href="https://github.com/NevercomeG">NevercomeG</a>
+        </div>
+      </footer>
+    
+    
+</body>
 </html>
