@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--icono pestaña del navegador-->
+    <link rel="shortcut icon" href="/assets/img/logo.allPasteleria.png">
+    <!--CSS-->
+    <link rel="stylesheet" href="/assets/css/admin.css">
+    <!--Parallax Scrolling-->
+
+
+    <title>All Pasteleria</title>
+</head>
+
+<body>
+    <header>
+        <ul>
+            <img src="/assets/img/logo.allPasteleria.png" alt="All pastelería">
+            <li><a href="index.html">Cerrar sesión</a></li>
+            <li><a href="#sectionCantidadAdornos">Inventario de adornos</a></li>
+            <li><a href="#sectionCantidaSabores">Inventario de sabores</a></li>
+            <li><a href="#sectiontablaPedidos">Pedidos Programados</a></li>
+        </ul>
+    </header>
+
+    <section className="tablaPedidos" id="sectiontablaPedidos">
+        <h1>Control de administrador</h1>
+        <p>Pedidos Programados</p>
+        <hr>
+        <table className="pedidos">
+
+            <tr>
+                <th>Id</th>
+                <th>Tipo de pastel</th>
+                <th>Sabor(s)</th>
+                <th>Adorno(s)</th>
+                <th>Hora de entrega</th>
+                <th>Fecha de entrega</th>
+                <th>Estado</th>
+            </tr>
+            <tr>
+                <td>FD1022</td>
+                <td>Circular</td>
+                <td>Fresa</td>
+                <td>Figura decorativa</td>
+                <td>15:30</td>
+                <td>17/10/2022</td>
+                <td><input type="button" value="Marcar Entregado" onClick="alert('Pedido marcado como entregado')" id="solicitar"></td>
+            </tr>
+            <tr>
+                <td>FD1023</td>
+                <td>Cuadrado</td>
+                <td>Chocolate</td>
+                <td>Fruta</td>
+                <td>14:30</td>
+                <td>19/10/2022</td>
+                <td><input type="button" value="Marcar Entregado" onClick="alert('Pedido marcado como entregado')" id="solicitar"></td>
+            </tr>
+            <tr>
+                <td>FD1023</td>
+                <td>Cuadrado</td>
+                <td>Chocolate</td>
+                <td>Fruta</td>
+                <td>14:30</td>
+                <td>19/10/2022</td>
+                <td><input type="button" value="Marcar Entregado" onClick="alert('Pedido marcado como entregado')" id="solicitar"></td>
+            </tr>
+            <tr>
+                <td>FD1023</td>
+                <td>Cuadrado</td>
+                <td>Chocolate</td>
+                <td>Fruta</td>
+                <td>14:30</td>
+                <td>19/10/2022</td>
+                <td><input type="button" value="Marcar Entregado" onClick="alert('Pedido marcado como entregado')" id="solicitar"></td>
+            </tr>
+            <tr>
+                <td>FD1023</td>
+                <td>Cuadrado</td>
+                <td>Chocolate</td>
+                <td>Fruta</td>
+                <td>14:30</td>
+                <td>19/10/2022</td>
+                <td><input type="button" value="Marcar Entregado" onClick="alert('Pedido marcado como entregado')" id="solicitar"></td>
+            </tr>
+            <tr>
+                <td>FD1023</td>
+                <td>Cuadrado</td>
+                <td>Chocolate</td>
+                <td>Fruta</td>
+                <td>14:30</td>
+                <td>19/10/2022</td>
+                <td><input type="button" value="Marcar Entregado" onClick="alert('Pedido marcado como entregado')" id="solicitar"></td>
+            </tr>
+            <tr>
+                <td>FD1023</td>
+                <td>Cuadrado</td>
+                <td>Chocolate</td>
+                <td>Fruta</td>
+                <td>14:30</td>
+                <td>19/10/2022</td>
+                <td><input type="button" value="Marcar Entregado" onClick="alert('Pedido marcado como entregado')" id="solicitar"></td>
+            </tr>
+            <tr>
+                <td>FD1023</td>
+                <td>Cuadrado</td>
+                <td>Chocolate</td>
+                <td>Fruta</td>
+                <td>14:30</td>
+                <td>19/10/2022</td>
+                <td><input type="button" value="Marcar Entregado" onClick="alert('Pedido marcado como entregado')" id="solicitar"></td>
+            </tr>
+            <tr>
+                <td>FD1023</td>
+                <td>Cuadrado</td>
+                <td>Chocolate</td>
+                <td>Fruta</td>
+                <td>14:30</td>
+                <td>19/10/2022</td>
+                <td><input type="button" value="Marcar Entregado" onClick="alert('Pedido marcado como entregado')" id="solicitar"></td>
+            </tr>
+
+        </table>
+    </section>
+
+    <section className="cantidaSabores" id="sectionCantidaSabores">
+        <p>Inventario de sabores</p>
+        <hr>
+        <table className="sabores">
+            <tr>
+                <th>Id</th>
+                <th>Nommbre</th>
+                <th>Cantidad Total</th>
+                <th>En uso</th>
+                <th>Pendientes</th>
+                <th>Almacen</th>
+                <th>Solicitar a Provedor</th>
+            </tr>
+            <tr>
+                <td>F1022</td>
+                <td>Fresa</td>
+                <td>100 pz</td>
+                <td>74</td>
+                <td>22</td>
+                <td>20</td>
+                <td><input type="button" value="Solicitar" onclick="alert('Solicitando sabor al provedor')" id="solicitar"></td>
+            </tr>
+            <tr>
+                <td>F1022</td>
+                <td>Fresa</td>
+                <td>100 pz</td>
+                <td>74</td>
+                <td>22</td>
+                <td>20</td>
+                <td><input type="button" value="Solicitar" onclick="alert('Solicitando sabor al provedor')" id="solicitar"></td>
+            </tr>
+            <tr>
+                <td>F1022</td>
+                <td>Fresa</td>
+                <td>100 pz</td>
+                <td>74</td>
+                <td>22</td>
+                <td>20</td>
+                <td><input type="button" value="Solicitar" onclick="alert('Solicitando sabor al provedor')" id="solicitar"></td>
+            </tr>
+            <tr>
+                <td>F1022</td>
+                <td>Fresa</td>
+                <td>100 pz</td>
+                <td>74</td>
+                <td>22</td>
+                <td>20</td>
+                <td><input type="button" value="Solicitar" onclick="alert('Solicitando sabor al provedor')" id="solicitar"></td>
+            </tr>
+            <tr>
+                <td>F1022</td>
+                <td>Fresa</td>
+                <td>100 pz</td>
+                <td>74</td>
+                <td>22</td>
+                <td>20</td>
+                <td><input type="button" value="Solicitar" onclick="alert('Solicitando sabor al provedor')" id="solicitar"></td>
+            </tr>
+        </table>
+    </section>
+
+    <section className="cantidadAdornos" id="sectionCantidadAdornos">
+        <p>Inventario de adornos</p>
+        <hr>
+        <table className="adornos">
+            <tr>
+                <th>Id</th>
+                <th>Nommbre</th>
+                <th>Cantidad Total</th>
+                <th>En uso</th>
+                <th>Pendientes</th>
+                <th>Almacen</th>
+                <th>Solicitar a Provedor</th>
+            </tr>
+            <tr>
+                <td>F1022</td>
+                <td>Fresa</td>
+                <td>100 pz</td>
+                <td>74</td>
+                <td>22</td>
+                <td>20</td>
+                <td><input type="button" value="Solicitar" onclick="alert('Solicitando sabor al Adorno')" id="solicitar"></td>
+            </tr>
+            <tr>
+                <td>F1022</td>
+                <td>Fresa</td>
+                <td>100 pz</td>
+                <td>74</td>
+                <td>22</td>
+                <td>20</td>
+                <td><input type="button" value="Solicitar" onclick="alert('Solicitando sabor al Adorno')" id="solicitar"></td>
+            </tr>
+            <tr>
+                <td>F1022</td>
+                <td>Fresa</td>
+                <td>100 pz</td>
+                <td>74</td>
+                <td>22</td>
+                <td>20</td>
+                <td><input type="button" value="Solicitar" onclick="alert('Solicitando sabor al Adorno')" id="solicitar"></td>
+            </tr>
+            <tr>
+                <td>F1022</td>
+                <td>Fresa</td>
+                <td>100 pz</td>
+                <td>74</td>
+                <td>22</td>
+                <td>20</td>
+                <td><input type="button" value="Solicitar" onclick="alert('Solicitando sabor al Adorno')" id="solicitar"></td>
+            </tr>
+            <tr>
+                <td>F1022</td>
+                <td>Fresa</td>
+                <td>100 pz</td>
+                <td>74</td>
+                <td>22</td>
+                <td>20</td>
+                <td><input type="button" value="Solicitar" onclick="alert('Solicitando sabor al Adorno')" id="solicitar"></td>
+            </tr>
+        </table>
+    </section>
+
+    <footer>
+        <div className="wave">
+            <img src="/assets/img/logo.allPasteleria.png" alt="all Pasteleria">
+            <h3 className="titulo">All Pasteleria <b> - Vive el placer de lo delicioso</b></h3>
+            <p>Empresa pastelera con 50 años de experiencia</p>
+            <h4>Dirección</h4>
+            <p className="info">
+                Av. Alta Villa 2, Altavilla, 55390 Ecatepec de Morelos, Méx.
+            </p>
+            <br>
+            <br>
+            <h4>Telefono</h4>
+            <p className="info">
+                Whatsapp <b>+52 000 000 00 00</b> / Telefono <b>747 47 0 00 00</b>
+            </p>
+            <br>
+            <br>
+            <h4>Horarios</h4>
+            <p className="info">
+                Lunes a Domingo de 9:30 AM a 8:40 PM
+            </p>
+            <br>
+            <br>
+            <br>
+            <br>
+            <a href="https://github.com/JoseEduardoVelazquezCN" target="_blank" className="autor"><b>By:</b>
+                @JoseEduardoVelazquezCN</a>
+
+        </div>
+    </footer>
+</body>
+
+</html>

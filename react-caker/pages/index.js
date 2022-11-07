@@ -327,56 +327,158 @@ export default function Home() {
 		</div>
 		</div>
 	</section>
-	<section>
-
-		<div className="text-2xl text-center py-10 px-10">
-			<h1 className="text-center py-4">Realiza el pedido de tu pastel</h1>
-			<h2 className="py-5">Proporcionanos tus datos de contacto</h2>
+	<section className="shadow-lg bg-white rounded-xl ">
+	<div class="grid grid-cols-1 m-10">
+		<div className="font-burtons text-2xl text-center py-10 px-10">
+			<h1 className="text-center text-7xl py-4">Realiza el pedido de tu pastel</h1>
+			<h2 className=" py-5">Proporcionanos tus datos de contacto</h2>
 			</div>
 			
-		<div className="flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap  px-10 rounded-xl justify-center">
-			<label> Nombre: </label>
-			<input className="shadow-md border-double" type="text" id="nombre"></input>
-			<label> Telefono: </label>
-			<input className="shadow-md" type="tel" id="telefono" maxLength="10"></input>
-			<label> Correo electronico: </label>
-			<input className="shadow-md" type="email" id="correo"></input>
-			<label> Descripcion general del pastel: </label>
-			<input className="shadow-md" type="text" id="descripcion"></input>
-		</div>
-			<div className="flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap  px-10 rounded-xl justify-center">
+			<div class="rounded-md">
+                <form id="payment-form" method="POST" action="">
+                    <section>
+                        <h2 class="uppercase tracking-wide text-lg font-semibold text-gray-700 my-2">Shipping & Billing Information</h2>
+                        <fieldset class="mb-3 bg-white shadow-lg rounded text-gray-600">
+                            <label class="flex border-b border-gray-200 h-12 py-3 items-center">
+                                <span class="text-right px-2">Name</span>
+                                <input name="name" class="focus:outline-none px-3" placeholder="Try Odinsson" required=""></input>
+                            </label>
+                            <label class="flex border-b border-gray-200 h-12 py-3 items-center">
+                                <span class="text-right px-2">Email</span>
+                                <input name="email" type="email" class="focus:outline-none px-3" placeholder="try@example.com" required=""></input>
+                            </label>
+                            <label class="flex border-b border-gray-200 h-12 py-3 items-center">
+                                <span class="text-right px-2">Address</span>
+                                <input name="address" class="focus:outline-none px-3" placeholder="10 Street XYZ 654"></input>
+                            </label>
+                            <label class="flex border-b border-gray-200 h-12 py-3 items-center">
+                                <span class="text-right px-2">City</span>
+                                <input name="city" class="focus:outline-none px-3" placeholder="San Francisco"></input>
+                            </label>
+                            <label class="inline-flex w-2/4 border-gray-200 py-3">
+                                <span class="text-right px-2">State</span>
+                                <input name="state" class="focus:outline-none px-3" placeholder="CA"></input>
+                            </label>
+                            <label class="xl:w-1/4 xl:inline-flex py-3 items-center flex xl:border-none border-t border-gray-200 py-3">
+                                <span class="text-right px-2 xl:px-0 xl:text-none">ZIP</span>
+                                <input name="postal_code" class="focus:outline-none px-3" placeholder="98603"></input>
+                            </label>
+                            <label class="flex border-t border-gray-200 h-12 py-3 items-center select relative">
+                                <span class="text-right px-2">Country</span>
+                                <div id="country" class="focus:outline-none px-3 w-full flex items-center">
+                                    <select name="country" class="border-none bg-transparent flex-1 cursor-pointer appearance-none focus:outline-none">
+                                        <option value="AU">Australia</option>
+                                        <option value="BE">Belgium</option>
+                                        <option value="BR">Brazil</option>
+                                        <option value="CA">Canada</option>
+                                        <option value="CN">China</option>
+                                        <option value="DK">Denmark</option>
+                                        <option value="FI">Finland</option>
+                                        <option value="FR">France</option>
+                                        <option value="DE">Germany</option>
+                                        <option value="HK">Hong Kong</option>
+                                        <option value="IE">Ireland</option>
+                                        <option value="IT">Italy</option>
+                                        <option value="JP">Japan</option>
+                                        <option value="LU">Luxembourg</option>
+                                        <option value="MX">Mexico</option>
+                                        <option value="NL">Netherlands</option>
+                                        <option value="PL">Poland</option>
+                                        <option value="PT">Portugal</option>
+                                        <option value="SG">Singapore</option>
+                                        <option value="ES">Spain</option>
+                                        <option value="TN">Tunisia</option>
+                                        <option value="GB">United Kingdom</option>
+                                        <option value="US" selected="selected">United States</option>
+                                    </select>
+                                </div>
+                            </label>
+                        </fieldset>
+                    </section>
+                </form>
+            </div>
+			<div class="rounded-md">
+                <section>
+                    <h2 class="uppercase tracking-wide text-lg font-semibold text-gray-700 my-2">Payment Information</h2>
+                    <fieldset class="mb-3 bg-white shadow-lg rounded text-gray-600">
+                        <label class="flex border-b border-gray-200 h-12 py-3 items-center">
+                            <span class="text-right px-2">Card</span>
+                            <input name="card" class="focus:outline-none px-3 w-full" placeholder="Card number MM/YY CVC" required=""></input>
+                        </label>
+                    </fieldset>
+                </section>
+            </div>
+			</div>
+			<div className="font-burtons flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap  rounded-xl justify-center">
 				<div className="basis-1/6 bg-white rounded-xl px-5 py-10 shadow-lg p-10 ">
 				<p className="text-5xl pb-10">Elige el sabor(s) </p>
-				<form action="" className="text-left">
-					<input type="checkbox" id="chocolate" value="Chocolate"></input>
-					<label> BIZCOCHO LIGHT DE PLÁTANO Y MANZANA</label>
+
+				<form action="" className="text-left text-sm">
+					<fieldset class="mb-3 bg-white shadow-lg rounded text-gray-600">
+				<label class="flex border-b border-gray-200 h-12 py-3 items-center">
+				<input checked id="bordered-checkbox-2" type="checkbox" value="" name="bordered-checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"></input>
+						<label for="bordered-checkbox-2" class="py-4 ml-2 w-full text-sm font-medium text-gray-900 dark:text-gray-300">Checked state</label>
+					
+                            </label>
+							
+				<div class="flex items-center pl-4 rounded border border-gray-200 dark:border-gray-700">
+						<input id="bordered-checkbox-1" type="checkbox" value="" name="bordered-checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"></input>
+						<label for="bordered-checkbox-1" class="py-4 ml-2 w-full text-sm font-medium text-gray-900 dark:text-gray-300">DBIZCOCHO LIGHT DE PLÁTANO Y MANZANA</label>
+					</div>
+					<div class="flex items-center pl-4 rounded border border-gray-200 dark:border-gray-700">
+						<input checked id="bordered-checkbox-2" type="checkbox" value="" name="bordered-checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"></input>
+						<label for="bordered-checkbox-2" class="py-4 ml-2 w-full text-sm font-medium text-gray-900 dark:text-gray-300">Checked state</label>
+					
+					</div>
+					<div class="flex items-center pl-4 rounded border border-gray-200 dark:border-gray-700">
+						<input checked id="bordered-checkbox-2" type="checkbox" value="" name="bordered-checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"></input>
+						<label for="bordered-checkbox-2" class="py-4 ml-2 w-full text-sm font-medium text-gray-900 dark:text-gray-300">Checked state</label>
+					</div>
+					<div class="flex items-center pl-4 rounded border border-gray-200 dark:border-gray-700">
+						<input checked id="bordered-checkbox-2" type="checkbox" value="" name="bordered-checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"></input>
+						<label for="bordered-checkbox-2" class="py-4 ml-2 w-full text-sm font-medium text-gray-900 dark:text-gray-300">Checked state</label>
+					</div>
+					<div class="flex items-center pl-4 rounded border border-gray-200 dark:border-gray-700">
+						<input checked id="bordered-checkbox-2" type="checkbox" value="" name="bordered-checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"></input>
+						<label for="bordered-checkbox-2" class="py-4 ml-2 w-full text-sm font-medium text-gray-900 dark:text-gray-300">Checked state</label>
+					</div>
+					<div class="flex items-center pl-4 rounded border border-gray-200 dark:border-gray-700">
+						<input checked id="bordered-checkbox-2" type="checkbox" value="" name="bordered-checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"></input>
+						<label for="bordered-checkbox-2" class="py-4 ml-2 w-full text-sm font-medium text-gray-900 dark:text-gray-300">Checked state</label>
+					</div>
+					
+					<input type="checkbox" className="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" id="chocolate" value="Chocolate"></input>
+					<label class="py-4 ml-2 w-full text-sm font-medium text-gray-900 dark:text-gray-300"> BIZCOCHO LIGHT DE PLÁTANO Y MANZANA</label>
 					<br></br>
-					<input type="checkbox" id="fresa" value="fresa"></input>
+					<input type="checkbox" className="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" id="fresa" value="fresa"></input>
 					<label> BIZCOCHO CON COBERTURA DE CHOCOLATE</label>
 					<br></br>
-					<input type="checkbox" id="galleta" value="galleta"></input>
+					<input type="checkbox" className="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" id="galleta" value="galleta"></input>
 					<label> BIZCOCHO DE SEMILLAS DE CHÍA</label>
 					<br></br>
-					<input type="checkbox" id="conbinado" value="conbinado"></input>
+					<input type="checkbox" className="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" id="conbinado" value="conbinado"></input>
 					<label> BIZCOCHO MARMOLADO CON FRAMBUESAS</label>
 					<br></br>
-					<input type="checkbox" id="spunk" value="spunk"></input>
+					<input type="checkbox" className="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" id="spunk" value="spunk"></input>
 					<label> BIZCOCHO PLUMCAKE DE AGUACATE</label>
 					<br></br>
-					<input type="checkbox" id="salvadoreño" value="salvadoreño"></input>
+					<input type="checkbox" className="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" id="salvadoreño" value="salvadoreño"></input>
 					<label> BIZCOCHO DE MANZANA</label>
 					<br></br>
-					<input type="checkbox" id="chocolate" value="Chocolate"></input>
+					<input type="checkbox" className="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" id="chocolate" value="Chocolate"></input>
 					<label> BIZCOCHO DE NARANJA</label>
 					<br></br>
-					<input type="checkbox" id="fresa" value="fresa"></input>
+					<input type="checkbox" className="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" id="fresa" value="fresa"></input>
 					<label> BIZCOCHO MADEIRA</label>
 					<br></br>
-					<input type="checkbox" id="galleta" value="galleta"></input>
+					<input type="checkbox" className="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" id="galleta" value="galleta"></input>
 					<label> BIZCOCHO "1, 2, 3"</label>
 					<br></br>
+					</fieldset>
 					</form>
+
 				</div>
+
 				<div className="basis-1/6 bg-white rounded-xl px-5 py-10 shadow-lg p-10">
 				<p className="text-5xl pb-10">Elige el adorno(s) </p>
 				<form action="" className="text-left">
@@ -399,11 +501,15 @@ export default function Home() {
 				</div>
 			</div>
 
-		<div  className="justify-center">
+		<div  className="flex justify-center p-5">
 			<button type="submit" onClick="alert('Tu pedido fue enviado')" className="bg-gradient-to-r from-cyan-500 text- to-teal-500 text-white px-4 py-2 border-none rounded-md ml-8">Enviar mi pedido</button>
 		</div>
 		</section>
 	</main>
+
+	<footer className="h-80 bg-slate-800">
+
+	</footer>
 	</div>
 );
 }
