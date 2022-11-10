@@ -320,8 +320,8 @@ postres para todas las ocasiones. Todos nuestros pasteles y postres son hechos c
 
 	{/* ======================== REALIZA EL PEDIDO DE TU PASTEL ======================== */}
 
-	<section className="shadow-lg bg-white rounded-xl dark:bg-transparent ">
-	<div className="grid m-10">
+	<section className=" bg-white rounded-xl dark:bg-transparent ">
+	<div className="grid">
 		<div className="text-2xl text-center uppercase tracking-wide font-semibold text-gray-700 py-10">
 			<h1 className="text-center text-5xl py-4 dark:text-white">Realiza el pedido de tu pastel</h1>
 			<h2 className="uppercase tracking-wide text-lg font-semibold text-gray-700 my-2 dark:text-white">Proporcionanos tus datos de contacto</h2>
