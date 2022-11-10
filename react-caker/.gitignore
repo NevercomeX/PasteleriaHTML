@@ -3,6 +3,8 @@ frontend/node_modules
 node_modules
 env
 
+react-caker/.next/cache
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
